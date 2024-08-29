@@ -26,8 +26,6 @@ openai_api_key = os.getenv("OPENAI_API_KEY")
 if openai_api_key is None:
     raise ValueError("La API Key de OpenAI no se ha encontrado. Por favor, verifica tu archivo .env")
 
-# Establecer la API Key de OpenAI como variable de entorno
-os.environ["OPENAI_API_KEY"] = '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'
 
 # Función para extraer texto de PDFs
 def extract_text_from_pdfs(folder_path):
