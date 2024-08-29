@@ -1,13 +1,6 @@
 import streamlit as st
 import os
 from PyPDF2 import PdfReader
-from langchain.embeddings import OpenAIEmbeddings
-from langchain.vectorstores import FAISS
-from langchain.llms import OpenAI
-from streamlit_navigation_bar import st_navbar
-from dotenv import load_dotenv
-import os
-from PyPDF2 import PdfReader
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.vectorstores import FAISS
 from langchain.llms import OpenAI
@@ -19,7 +12,7 @@ logger = logging.getLogger(__name__)
 
 
 # Obtener la API Key desde las variables de entorno
-openai_api_key = os.getenv("OPENAI_API_KEY")
+openai_api_key = st.secrets["OPENAI_API_KEY"]
 
 if openai_api_key is None:
     raise ValueError("La API Key de OpenAI no se ha encontrado. Por favor, verifica tu archivo .env")
