@@ -17,8 +17,6 @@ import logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# Cargar las variables de entorno
-load_dotenv()
 
 # Obtener la API Key desde las variables de entorno
 openai_api_key = os.getenv("OPENAI_API_KEY")
